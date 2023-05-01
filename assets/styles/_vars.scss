@@ -1,0 +1,26 @@
+:root {
+  //base
+  --animation: all 0.3s ease-in-out;
+  --fontFamily: 'Raleway', sans-serif;
+
+  //sizes
+  --minWidth: 320px;
+  --maxWidth: 2000px;
+  --maxWidthContainer: 1440px;
+  --md1: calc(var(--maxWidthContainer) + 40px);
+  --md2: 1024.98px;
+  --md3: 767.98px;
+  --md4: 479.98px;
+
+  // colors
+  --light-color: #ffffff;
+  --red: #DA002B;
+  --redHover: rgba(235, 21, 55, 0.05);
+  --black: #111111;
+  --gray: #999999;
+  --grayBg: #f2f2f2;
+  --green: #12bf6c;
+  --greenHover: rgba(18, 191, 108, 0.05);
+  --blue: #2B71F8;
+  --blue2: #005CFE;
+}

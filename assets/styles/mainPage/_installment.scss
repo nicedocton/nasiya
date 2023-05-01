@@ -1,0 +1,381 @@
+.installment {
+  padding: 0 18px;
+  &__container {
+    background-color: var(--grayBg);
+    border-radius: 80px;
+  }
+  &-purchase {
+    padding-top: 80px;
+    margin-bottom: 80px;
+    .title {
+      margin-bottom: 80px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      &-icon {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 24px;
+        span {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100px;
+          height: 100px;
+          border-radius: 25px;
+          background-color: var(--red);
+          img {
+            width: 44px;
+            height: 44px;
+          }
+        }
+      }
+
+      &-text {
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 30px;
+        span {
+          display: block;
+          margin-bottom: 12px;
+          font-weight: 600;
+          font-size: 28px;
+          line-height: 34px;
+        }
+      }
+    }
+  }
+
+  &-methods {
+    margin-bottom: 80px;
+    .title {
+      margin-bottom: 56px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:  30px;
+    }
+  }
+
+  &-download {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 172px 0;
+    background-image: url("@/assets/img/app.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: left bottom;
+    .title {
+      margin-bottom: 36px;
+    }
+
+    &__content {
+      width: 50%;
+      margin-right: 6.25%;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    &__item {
+      a {
+        display: block;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024.98px) {
+    padding: 0;
+    &__container {
+      border-radius: 36px;
+    }
+
+    &-purchase {
+      padding-top: 48px;
+      margin-bottom: 64px;
+      .title {
+        margin-bottom: 24px;
+      }
+
+      &__list {
+        gap: 16px;
+      }
+
+      &__item {
+        &-icon {
+          margin-bottom: 12px;
+          span {
+            width: 54px;
+            height: 54px;
+            border-radius: 14px;
+            img {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+
+        &-text {
+          font-size: 16px;
+          line-height: 19px;
+          span {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+
+    &-methods {
+      margin-bottom: 64px;
+
+      .title {
+        margin-bottom: 24px;
+      }
+
+      &__list {
+        gap: 16px;
+      }
+    }
+
+    &-download {
+      padding: 104px 0;
+      background-size: auto 100%;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      &__list {
+        gap: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    &__container {
+      border-radius: 28px;
+    }
+
+    &-purchase {
+      padding-top: 32px;
+      margin-bottom: 48px;
+      .title {
+        margin-bottom: 20px;
+      }
+
+      &__list {
+        grid-template-columns: 1fr;
+      }
+
+      &__item {
+        &-icon {
+
+        }
+
+        &-text {
+          font-size: 14px;
+          line-height: 17px;
+          span {
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+
+    &-methods {
+      margin-bottom: 48px;
+
+      .title {
+        margin-bottom: 20px;
+      }
+
+      &__list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-download {
+      padding: 0 0 32px;
+      background-image: none;
+
+      .title {
+        text-align: left;
+      }
+
+      &__content {
+        width: 100%;
+      }
+
+      &__list {
+        width: 172px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+  }
+}
+
+.methods-item {
+  background-color: #E8E8E8;
+  border-radius: 30px;
+  padding: 40px 30px 30px;
+  &:first-child {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    min-height: 680px;
+    background-image: url("@/assets/img/phone.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 84.54% auto;
+
+    .methods-item {
+      &__title {
+        max-width: 45.11%;
+      }
+      &__text {
+        max-width: 45.11%;
+      }
+    }
+  }
+
+  &__icon {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 24px;
+    span {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 12px;
+    max-width: 65.82%;
+  }
+
+  &__text {
+    font-size: 25px;
+    line-height: 30px;
+    max-width: 65.82%;
+  }
+
+  .link {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--red);
+    transition: var(--animation);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (max-width: 1024.98px) {
+    padding: 20px 16px 16px;
+    border-radius: 16px;
+    &:first-child {
+      min-height: 368px;
+      background-size: auto 100%;
+
+      .methods-item {
+        &__title {
+          max-width: 45.11%;
+        }
+        &__text {
+          max-width: 45.11%;
+        }
+      }
+    }
+
+    &__icon {
+      gap: 16px;
+      margin-bottom: 14px;
+      span {
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    &__title {
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 8px;
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .link {
+      font-size: 12px;
+      line-height: 14px;
+      margin-top: 8px;
+    }
+  }
+
+
+  @media (max-width: 767.98px) {
+    border-radius: 14px;
+    padding: 16px;
+    &:first-child {
+      padding: 32px 16px 16px;
+      min-height: 328px;
+      .methods-item {
+        &__title {
+          max-width: 50%;
+        }
+        &__text {
+          max-width: 50%;
+        }
+      }
+    }
+    &__icon {
+      gap: 12px;
+      margin-bottom: 12px;
+      span {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    &__title {
+      max-width: 292px;
+    }
+
+    &__text {
+      max-width: 292px;
+    }
+
+    .link {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}

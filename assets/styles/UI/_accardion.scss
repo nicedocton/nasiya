@@ -1,0 +1,130 @@
+.accardion {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      position: relative;
+      padding-left: 86px;
+      font-weight: 600;
+      font-size: 32px;
+      line-height:38px;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    &-details {
+      padding: 0 0 0 86px;
+      font-size: 25px;
+      line-height: 30px;
+      &-inner {
+        padding-top: 30px;
+      }
+    }
+  }
+  &-caret {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--red);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &:after {
+      content: "";
+      width: 36px;
+      height: 36px;
+      display: block;
+      background-image: url("@/assets/img/svg/u_angle-down.svg");
+      background-size: 36px;
+      transition: transform 0.3s ease-in-out;
+    }
+    &.is-active {
+      &:after {
+        transform: translateY(-2px) rotate(180deg);
+      }
+    }
+  }
+
+  @media (max-width: 1024.98px) {
+    gap: 20px;
+    &__item {
+      &-title {
+        min-height: 32px;
+        font-size: 18px;
+        line-height: 22px;
+        padding-left: 48px;
+      }
+      &-details {
+        padding-left: 48px;
+        font-size: 16px;
+        line-height: 19px;
+        &-inner {
+          padding-top: 8px;
+        }
+      }
+    }
+    &-caret {
+      width: 32px;
+      height: 32px;
+      &:after {
+        width: 24px;
+        height: 24px;
+        background-size: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    gap: 16px;
+
+    &__item {
+      &-title {
+        font-size: 16px;
+        line-height:19px;
+      }
+      &-details {
+        font-size: 14px;
+        line-height: 17px;
+      }
+    }
+  }
+
+}
+
+.faq-fade {
+  &-enter {
+    max-height: 0;
+    display: block;
+  }
+  &-enter-to {
+  }
+  &-enter-active {
+    animation: accordeonAni 300ms ease-in-out;
+    overflow: hidden;
+  }
+  &-leave {
+    display: block;
+  }
+  &-leave-to {
+    display: block;
+  }
+  &-leave-active {
+    animation: accordeonAni 300ms ease-in-out;
+    animation-direction: reverse;
+    overflow: hidden;
+  }
+}
+
+@keyframes accordeonAni {
+  0% {
+    max-height: 0;
+  }
+}
+

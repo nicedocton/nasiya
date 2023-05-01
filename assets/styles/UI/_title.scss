@@ -1,0 +1,19 @@
+.title {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+  text-align: center;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  color: var(--black);
+
+  @media (max-width: 1024.98px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+  }
+}

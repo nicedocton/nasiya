@@ -1,0 +1,43 @@
+.faq {
+  padding: 120px 0;
+  &__container {
+    display: flex;
+    gap: 30px;
+  }
+
+  .title {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+
+  &__aside {
+    flex: 1 0 35%;
+  }
+
+  &__content {
+    flex: 1 0 calc(100% - 35% - 30px);
+  }
+
+  @media (max-width: 1024.98px) {
+    padding: 64px 0;
+    &__container {
+      gap: 16px;
+    }
+
+    .title {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 39px 0 48px;
+    &__container {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .title {
+      margin-bottom: 12px;
+    }
+  }
+}

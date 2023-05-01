@@ -1,0 +1,53 @@
+.partners {
+  padding: 95px 0;
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    margin-bottom: 56px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn-wrap {
+    text-align: center;
+  }
+
+  @media (max-width: 1024.98px) {
+    padding: 64px 0;
+
+    &__title {
+      margin-bottom: 24px;
+    }
+
+    &__list {
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 48px 0;
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 19px;
+      margin-bottom: 20px;
+    }
+  }
+
+}
+

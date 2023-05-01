@@ -1,0 +1,21 @@
+@import "fonts";
+@import "vars";
+@import "null";
+@import "UI/title";
+
+._container {
+  padding: 0 25px;
+  max-width: var(--md1);
+  margin: 0 auto;
+  transition: var(--animation);
+
+  @media (max-width: 767.98px) {
+    padding: 0 16px;
+  }
+}
+
+.page {
+  flex: 1 1 auto;
+  min-height: 500px;
+}
+
