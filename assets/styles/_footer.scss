@@ -1,7 +1,7 @@
 .footer {
   background: var(--grayBg);
   border-radius: 80px 80px 0 0;
-  padding: 60px 0 44px;
+  padding: 60px 0 0;
   &__container {
 
   }
@@ -152,20 +152,31 @@
 
   &-bottom {
     padding: 40px 0 44px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
     &__col {
       &:first-child {
-        flex: 0 0 220px;
-      }
-      &:nth-child(2) {
-        flex: 0 1 35.63%;
+        display: grid;
+        grid-template-columns: .7fr 1fr;
+        justify-content: space-between;
+        grid-gap: 5px;
+        align-items: center;
       }
       &:last-child {
-        flex: 0 1 24.72%;
+        display: flex;
         justify-content: flex-end;
-        min-width: 356px;
       }
     }
-
+    &__public {
+      display: flex;
+      justify-content: flex-start;
+      gap: 15%;
+      a {
+        white-space: nowrap;
+      }
+    }
     &__socials {
       display: flex;
       gap: 16px;
@@ -187,5 +198,84 @@
     }
   }
 
+  @media (max-width: 1024.98px) {
+    border-radius: 36px 36px 0 0;
+    padding: 48px 0 0;
+    &-top {
+      flex-wrap: wrap;
+      gap: 10.74%;
+      padding-bottom: 48px;
+      &__col {
+        &:first-child {
+          flex: 0 0 200px;
+        }
+        &:nth-child(2) {
+          flex: 1 0 auto;
+          justify-content: flex-start;
+          gap: 16.57%;
+        }
+        &:last-child {
+          flex: 0 1 100%;
+          margin-top: 45px;
+        }
+      }
+      &__payments {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+    &-bottom {
+      &__col {
+        &:first-child {
+          align-items: flex-start;
+        }
+      }
+      &__public {
+        grid-gap: 8px;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 36px 0 0;
+    &-top {
+      flex-direction: column;
+      gap: 36px;
+      padding-bottom: 36px;
+      &__col {
+        &:first-child {
+          flex: 0 0 100%;
+        }
+        &:nth-child(2) {
+          flex: 0 0 100%;
+          flex-direction: column;
+          gap: 36px;
+        }
+        &:last-child {
+          margin-top: 0;
+          flex: 0 0 100%;
+        }
+      }
+      &__payments {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+    }
+    &-bottom {
+      grid-template-columns: 1fr;
+      padding: 36px 0 40px;
+      &__col {
+        &:first-child {
+          grid-template-columns: 1fr;
+        }
+        &:last-child {
+          justify-content: flex-start;
+        }
+      }
+      &__public {
+        padding: 20px 0;
+      }
+    }
+  }
 
 }

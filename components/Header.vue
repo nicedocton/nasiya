@@ -8,13 +8,13 @@
           <span></span>
         </div>
       </button>
-      <a href="#" class="header__logo">
+      <nuxt-link to="/" class="header__logo">
         <img src="@/assets/img/logo.svg" alt="olcha nasiya" />
-      </a>
+      </nuxt-link>
       <nav class="header__nav">
         <ul>
-          <li><a href="#">Условия рассрочки</a></li>
-          <li><a href="#">Стать партнером</a></li>
+          <li><nuxt-link to="/installment-terms">Условия рассрочки</nuxt-link></li>
+          <li><nuxt-link to="/sell-on-olcha">Стать партнером</nuxt-link></li>
         </ul>
       </nav>
       <div class="header__actions">
