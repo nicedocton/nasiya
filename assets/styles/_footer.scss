@@ -2,9 +2,6 @@
   background: var(--grayBg);
   border-radius: 80px 80px 0 0;
   padding: 60px 0 0;
-  &__container {
-
-  }
 
   &-top {
     display: flex;
@@ -169,12 +166,25 @@
         justify-content: flex-end;
       }
     }
+    &__copy {
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: 1.2;
+      color: var(--gray);
+    }
     &__public {
       display: flex;
       justify-content: flex-start;
       gap: 15%;
       a {
         white-space: nowrap;
+        font-size: 14px;
+        line-height: 1.2;
+        color: var(--gray);
+        transition: var(--animation);
+        &:hover {
+          color: var(--red);
+        }
       }
     }
     &__socials {

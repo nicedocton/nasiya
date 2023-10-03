@@ -4,6 +4,7 @@
   left: 0;
   width: 100%;
   background-color: var(--light-color);
+  z-index: 5;
   &__container {
     display: flex;
     align-items: center;
